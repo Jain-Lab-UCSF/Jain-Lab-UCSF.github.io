@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="A mountain peak, marking the drop in oxygen with altitude">
+  <g fill="none" stroke="#1b78b7" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 50 L 24 20 L 36 38 L 44 28 L 58 50 Z"/>
+  </g>
+  <path d="M24 20 L 30 29 L 24 27 L 19 32 Z" fill="#55b5eb"/>
+</svg>

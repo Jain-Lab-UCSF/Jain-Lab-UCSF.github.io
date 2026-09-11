@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="A capsule, representing a vitamin">
+  <rect x="6" y="21" width="52" height="22" rx="11" fill="none" stroke="#b0461e" stroke-width="3.2"/>
+  <path d="M32 21 v22" stroke="#b0461e" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M17 21 a11 11 0 0 0 0 22 h15 v-22 z" fill="#d98a5f" opacity=".55"/>
+</svg>
