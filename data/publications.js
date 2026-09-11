@@ -3,12 +3,16 @@
    Newest first. To ADD a paper, copy a { ... } block to the top
    and change the text. To REMOVE one, delete its whole block.
 
+   Titles are the exact published titles, verbatim. If you shorten
+   one for display, the entry no longer matches the article it links
+   to — which is how several errors crept in before.
+
    Fields:
      year     - number, used for sorting and the year filter
-     title    - short display title (shown in caps)
+     title    - exact published title (shown in caps)
      authors  - full author list as plain text
      journal  - e.g. "Nature Metabolism"
-     details  - volume/pages, e.g. "189, 1–15" (optional)
+     details  - volume/pages, e.g. "189, 2648–2662" (optional)
      href     - link to the paper
      featured - true puts it in the "Selected work" section on the home page
      preprint - true marks it a preprint; drives the Published/Preprint filter
@@ -24,31 +28,19 @@
 
 const PUBLICATIONS = [
 
-  /* ------------------------------------------------------------------
-     TRENDS IN BIOCHEMICAL SCIENCES REVIEW — NEEDS TITLE AND AUTHORS
-
-     Claude could not read the title or author list: cell.com renders
-     its pages with JavaScript, and PubMed/Crossref were unreachable.
-     Rather than guess at a citation, this entry is set to draft, so it
-     does NOT appear on the site yet.
-
-     To publish it: fill in title and authors below, then delete the
-     `draft: true` line. Or paste the citation to Claude and it will.
-     ------------------------------------------------------------------ */
   {
-    draft: true,
     year: 2026,
-    title: "",
-    authors: "",
+    title: "The diversity of terminal electron acceptors across eukaryotes",
+    authors: "A. D. Midha, I. H. Jain",
     journal: "Trends in Biochemical Sciences",
     href: "https://www.cell.com/trends/biochemical-sciences/fulltext/S0968-0004(26)00217-3",
     review: true,
-    topics: [],
+    topics: ["Oxygen"],
   },
 
   {
     year: 2026,
-    title: "The disease gene THAP12 is a transcriptional regulator of mitochondrial ETC Complex 1",
+    title: "The Disease Gene THAP12 is a Transcriptional Regulator of Mitochondrial ETC Complex I",
     authors: "B. R. Desousa, Y. Abe, M. Kampmann, I. H. Jain",
     journal: "bioRxiv",
     href: "https://www.biorxiv.org/content/10.64898/2026.07.16.738975v1",
@@ -58,9 +50,10 @@ const PUBLICATIONS = [
 
   {
     year: 2026,
-    title: "Hypoxia rescues Complex 1-associated disease caused by proteostatic defects",
-    authors: "A. Garg, B. R. Desousa, R. Roy, A. Flis, S. Y. Blume, Y. Abe, A. A. Melo, R. R. Cupo, G. Gregorian, D. R. Southworth, J. Shorter, I. H. Jain",
+    title: "Hypoxia rescues complex 1-associated disease caused by proteostatic defects",
+    authors: "A. Garg, B. R. Desousa, R. Roy, A. Flis, S. Y. Blume, Y. Abe, A. A. Melo, R. R. Cupo, G. Grigorean, D. R. Southworth, J. Shorter, I. H. Jain",
     journal: "Nature Metabolism",
+    details: "8, 1791–1804",
     href: "https://www.nature.com/articles/s42255-026-01566-0",
     featured: true,
     topics: ["Oxygen"],
@@ -72,9 +65,9 @@ const PUBLICATIONS = [
   {
     year: 2026,
     title: "Vitamin B2 and B3 nutrigenomics reveals a therapy for NAXD disease",
-    authors: "A. Garg, S. Y. Blume, H. Huynh, A. M. Barrios, O. O. Karabulut, Q. Zhao, A. D. Midha, A. W. Turner, B. V. Resnick, X. Chen, A. Agrawal, J. Kim, L. Chen, Q. Ran, A. M. Ryan, R. C. Larson, M. Negahban, S. C. K. Nelson, A. C. Yang, M. Traglia, I. H. Jain",
+    authors: "A. Garg, S. Y. Blume, H. Huynh, A. M. Barrios, O. O. Karabulut, Q. Zhao, A. D. Midha, A. W. Turner, B. V. Resnick, X. Chen, A. Agrawal, J. Kim, L. Chen, Q. Ran, A. M. Ryan, R. C. Larson, M. Negahban, S. C. K. Nelson, A. C. Yang, M. Traglia, R. Thomas, R. Sun, M. Paredes, M. R. Corces, H. Lin, I. H. Jain",
     journal: "Cell",
-    details: "189, 1–15",
+    details: "189, 2648–2662",
     href: "https://www.sciencedirect.com/science/article/pii/S0092867426001091",
     featured: true,
     topics: ["Vitamins"],
@@ -90,7 +83,7 @@ const PUBLICATIONS = [
     title: "Red blood cells serve as a primary glucose sink to improve glucose tolerance at altitude",
     authors: "Y. Martí-Mateos, Z. Safari, S. Bevers, A. D. Midha, W. R. Flanigan, T. Joshi, H. Huynh, B. R. Desousa, S. Y. Blume, A. H. Baik, S. Rogers, A. V. Issaian, A. Doctor, A. D'Alessandro, I. H. Jain",
     journal: "Cell Metabolism",
-    details: "38, 1–17",
+    details: "38, 529–545",
     href: "https://www.cell.com/cell-metabolism/fulltext/S1550-4131(26)00018-5",
     featured: true,
     topics: ["Oxygen"],
@@ -103,7 +96,7 @@ const PUBLICATIONS = [
   {
     year: 2026,
     title: "Systemic hypoxia suppresses solid tumor growth",
-    authors: "A. D. Midha, B. T. L. Chew, B. M. H. Choi, J. M. Suh, C. Carpenter, A. H. Baik, T. A. Joshi, S. Y. Blume, A. G. Haribowo, P. Ruivo, W. R. Flanigan, A. Garg, D. D. Zhang, V. Subramanyam, R. Shuere, Y. Seo, H. VanBrocklin, H. Goodarzi, I. H. Jain",
+    authors: "A. D. Midha, B. T. L. Chew, B. M. H. Choi, J. M. Suh, C. Carpenter, A. H. Baik, T. Joshi, S. Y. Blume, A. G. Haribowo, P. Ruivo, W. R. Flanigan, A. Garg, D. D. Zhang, V. Subramanyam, R. Shuere, Y. Seo, H. VanBrocklin, H. Goodarzi, I. H. Jain",
     journal: "bioRxiv",
     href: "https://www.biorxiv.org/content/10.64898/2026.02.09.704975v1",
     preprint: true,
@@ -115,33 +108,33 @@ const PUBLICATIONS = [
     title: "Genome-wide CRISPRi screen identifies basigin loss as protective in cardiac hypoxia",
     authors: "W. R. Flanigan, A. D. Midha, S. Y. Blume, Y. Martí-Mateos, M. W. Costa, Y. Huang, A. H. Baik, H. Huynh, G. Susarla, N. K. Bennett, R. A. Nowak, D. Srivastava, K. Nakamura, I. H. Jain",
     journal: "bioRxiv",
-    href: "https://www.biorxiv.org/content/10.64898/2026.01.26.701810v1.article-info",
+    href: "https://www.biorxiv.org/content/10.64898/2026.01.26.701810v1",
     preprint: true,
     topics: ["Oxygen"],
   },
 
   {
     year: 2025,
-    title: "HypoxyStat, a small molecule form of hypoxia therapy",
+    title: "HypoxyStat, a small-molecule form of hypoxia therapy that increases oxygen-hemoglobin affinity",
     authors: "S. Y. Blume, A. Garg, Y. Martí-Mateos, A. D. Midha, B. T. L. Chew, B. Lin, C. Yu, R. Dick, P. S. Lee, E. Situ, R. Sarwaikar, E. Green, V. Ramanan, G. Grotenbreg, M. Hoek, C. Sinz, I. H. Jain",
     journal: "Cell",
-    details: "188",
-    href: "https://www.cell.com/cell/pdf/S0092-8674(25)00098-4.pdf",
+    details: "188, 1580–1588",
+    href: "https://www.cell.com/cell/fulltext/S0092-8674(25)00098-4",
     featured: true,
     topics: ["Oxygen"],
     news: [
       { label: "Gladstone: Daily drug captures health benefits of high-altitude living", href: "https://gladstone.org/news/daily-drug-captures-health-benefits-high-altitude-low-oxygen-living" },
     ],
-    preview: "https://www.cell.com/cell/abstract/S0092-8674(25)00207-7",
+    preview: "https://www.cell.com/cell/fulltext/S0092-8674(25)00207-7",
     video: "https://www.youtube.com/watch?v=J-LY9Hov1NI",
   },
 
   {
     year: 2023,
-    title: "In vivo protein turnover nominates MYBBP1A as a mediator of the hyperoxia response",
+    title: "In vivo protein turnover rates in varying oxygen tensions nominate MYBBP1A as a mediator of the hyperoxia response",
     authors: "X. Chen, A. G. Haribowo, A. H. Baik, A. Fossati, E. Stevenson, Y. R. Chen, N. S. Reyes, T. Peng, M. A. Matthay, M. Traglia, A. R. Pico, D. F. Jarosz, A. Buchwalter, S. Ghaemmaghami, D. L. Swaney, I. H. Jain",
     journal: "Science Advances",
-    details: "9",
+    details: "9, eadj4884",
     href: "https://www.science.org/doi/10.1126/sciadv.adj4884",
     topics: ["Oxygen"],
     news: [
@@ -151,11 +144,11 @@ const PUBLICATIONS = [
 
   {
     year: 2023,
-    title: "Mechanisms of oxygen toxicity",
+    title: "Oxygen toxicity causes cyclic damage by destabilizing specific Fe-S cluster-containing protein complexes",
     authors: "A. H. Baik*, A. G. Haribowo*, X. Chen*, B. B. Queliconi, A. M. Barrios, A. Garg, M. Maishan, A. R. Campos, M. A. Matthay, I. H. Jain (*equal contribution)",
     journal: "Molecular Cell",
-    details: "83, 1–19",
-    href: "https://www.sciencedirect.com/science/article/pii/S1097276523001168?via%3Dihub",
+    details: "83, 942–960",
+    href: "https://www.cell.com/molecular-cell/fulltext/S1097-2765(23)00116-8",
     featured: true,
     topics: ["Oxygen"],
     news: [
@@ -165,14 +158,14 @@ const PUBLICATIONS = [
 
   {
     year: 2023,
-    title: "Organ-specific fuel rewiring in acute and chronic hypoxia",
-    authors: "A. M. Midha*, Y. Zhou*, B. B. Queliconi, A. M. Barrios, C. O. Y. Fong, J. E. Blecha, H. VanBrocklin, Y. Seo, I. H. Jain (*equal contribution)",
+    title: "Organ-specific fuel rewiring in acute and chronic hypoxia redistributes glucose and fatty acid metabolism",
+    authors: "A. D. Midha*, Y. Zhou*, B. B. Queliconi, A. M. Barrios, A. G. Haribowo, B. T. L. Chew, C. O. Y. Fong, J. E. Blecha, H. VanBrocklin, Y. Seo, I. H. Jain (*equal contribution)",
     journal: "Cell Metabolism",
     details: "35, 504–516",
-    href: "https://linkinghub.elsevier.com/retrieve/pii/S1550-4131(23)00043-8",
+    href: "https://www.cell.com/cell-metabolism/fulltext/S1550-4131(23)00043-8",
     featured: true,
     topics: ["Oxygen"],
-    preview: "https://www.cell.com/cell-metabolism/pdf/S1550-4131(23)00047-5.pdf",
+    preview: "https://www.cell.com/cell-metabolism/fulltext/S1550-4131(23)00047-5",
     news: [
       { label: "Gladstone: How high altitude changes your body's metabolism", href: "https://gladstone.org/news/how-high-altitude-changes-your-bodys-metabolism" },
     ],
@@ -180,7 +173,7 @@ const PUBLICATIONS = [
 
   {
     year: 2022,
-    title: "The Goldilocks oxygen principle: not too little and not too much",
+    title: "The Goldilocks Oxygen Principle: not too little and not too much",
     authors: "W. R. Flanigan, I. H. Jain",
     journal: "Nature Cardiovascular Research",
     details: "1, 1101–1103",
@@ -190,17 +183,17 @@ const PUBLICATIONS = [
 
   {
     year: 2022,
-    title: "Ferroptosis and PDAC therapy resistance",
+    title: "Coordinated Transcriptional and Catabolic Programs Support Iron-Dependent Adaptation to RAS–MAPK Pathway Inhibition in Pancreatic Cancer",
     authors: "M. Ravichandran, J. Hu … B. R. Desousa … I. H. Jain … R. M. Perera",
     journal: "Cancer Discovery",
-    details: "OF1–OF22",
+    details: "12, 2198–2219",
     href: "https://aacrjournals.org/cancerdiscovery/article/12/9/2198/708778/Coordinated-Transcriptional-and-Catabolic-Programs",
     topics: [],
   },
 
   {
     year: 2021,
-    title: "Airway stem cells sense hypoxia and differentiate into protective neuroendocrine cells",
+    title: "Airway stem cells sense hypoxia and differentiate into protective solitary neuroendocrine cells",
     authors: "M. Shivaraju, U. K. Chitta, R. M. H. Grange, I. H. Jain … J. Rajagopal",
     journal: "Science",
     details: "371, 52–57",
@@ -210,9 +203,10 @@ const PUBLICATIONS = [
 
   {
     year: 2020,
-    title: "Turning the oxygen dial: balancing the highs and lows",
+    title: "Turning the Oxygen Dial: Balancing the Highs and Lows",
     authors: "A. H. Baik, I. H. Jain",
     journal: "Trends in Cell Biology",
+    details: "30, 516–536",
     href: "https://www.sciencedirect.com/science/article/pii/S096289242030091X?via%3Dihub",
     review: true,
     topics: ["Oxygen"],
@@ -220,29 +214,29 @@ const PUBLICATIONS = [
 
   {
     year: 2020,
-    title: "Peroxisomal lipid metabolism as a hypoxia adaptation",
+    title: "Genetic Screen for Cell Fitness in High or Low Oxygen Highlights Mitochondrial and Lipid Metabolism",
     authors: "I. H. Jain*, S. E. Calvo*, A. L. Markhard … V. K. Mootha (*equal contribution)",
     journal: "Cell",
-    details: "181, 1–12",
-    href: "https://linkinghub.elsevier.com/retrieve/pii/S0092-8674(20)30321-4",
+    details: "181, 716–727",
+    href: "https://www.cell.com/cell/fulltext/S0092-8674(20)30321-4",
     featured: true,
     topics: ["Oxygen"],
   },
 
   {
     year: 2019,
-    title: "Hypoxia therapy normalizes brain hyperoxia in mitochondrial disease",
+    title: "Leigh Syndrome Mouse Model Can Be Rescued by Interventions that Normalize Brain Hyperoxia, but Not HIF Activation",
     authors: "I. H. Jain*, L. Zazzeron*, O. Goldberger … W. M. Zapol**, V. K. Mootha** (*, **equal contribution)",
     journal: "Cell Metabolism",
-    details: "30, 1–9",
-    href: "https://linkinghub.elsevier.com/retrieve/pii/S1550-4131(19)30379-1",
+    details: "30, 824–832",
+    href: "https://www.cell.com/cell-metabolism/fulltext/S1550-4131(19)30379-1",
     topics: ["Oxygen"],
-    preview: "https://www.cell.com/cell-metabolism/pdf/S1550-4131(19)30507-8.pdf",
+    preview: "https://www.cell.com/cell-metabolism/fulltext/S1550-4131(19)30507-8",
   },
 
   {
     year: 2017,
-    title: "Hypoxia reverses neurological lesions in mitochondrial disease",
+    title: "Hypoxia treatment reverses neurodegenerative disease in a mouse model of Leigh syndrome",
     authors: "M. Ferrari*, I. H. Jain*, O. Goldberger … V. K. Mootha**, W. M. Zapol** (*equal contribution)",
     journal: "PNAS",
     details: "114 (21), E4241–E4250",
@@ -270,7 +264,7 @@ const PUBLICATIONS = [
 
   {
     year: 2012,
-    title: "Chromosome ordering and segregation in cyanobacteria",
+    title: "Spatial ordering of chromosomes enhances the fidelity of chromosome partitioning in cyanobacteria",
     authors: "I. H. Jain*, V. Vijayan*, E. K. O'Shea (*equal contribution)",
     journal: "PNAS",
     details: "109 (34), 13638–13643",
@@ -280,40 +274,41 @@ const PUBLICATIONS = [
 
   {
     year: 2011,
-    title: "Circadian gene expression in cyanobacteria",
+    title: "A high resolution map of a cyanobacterial transcriptome",
     authors: "V. Vijayan, I. H. Jain, E. K. O'Shea",
     journal: "Genome Biology",
-    details: "12:R47",
-    href: "",
+    details: "12, R47",
+    href: "https://genomebiology.biomedcentral.com/articles/10.1186/gb-2011-12-5-r47",
     topics: [],
   },
 
   {
     year: 2008,
-    title: "Connexin43 and bone regeneration",
-    authors: "A. D. Hoptak-Solga, S. Nielsen, I. H. Jain, R. Thummel, D. Hyde, M. K. Iovine",
+    title: "Connexin43 (GJA1) is required in the population of dividing cells during fin regeneration",
+    authors: "A. D. Hoptak-Solga, S. Nielsen, I. Jain, R. Thummel, D. R. Hyde, M. K. Iovine",
     journal: "Developmental Biology",
-    href: "",
+    details: "317, 541–548",
+    href: "https://doi.org/10.1016/j.ydbio.2008.02.051",
     topics: [],
   },
 
   {
     year: 2007,
-    title: "Pulsatile bone growth",
-    authors: "I. H. Jain, C. Stroka, J. Yan, W. Huang, M. K. Iovine",
+    title: "Bone growth in zebrafish fins occurs via multiple pulses of cell proliferation",
+    authors: "I. Jain, C. Stroka, J. Yan, W.-M. Huang, M. K. Iovine",
     journal: "Developmental Dynamics",
     details: "236, 2668–2674",
-    href: "",
+    href: "https://doi.org/10.1002/dvdy.21270",
     topics: [],
   },
 
   {
     year: 2003,
-    title: "Effects of rapid expansion on glass surfaces",
+    title: "Inhomogeneous evolution of a glass surface via free, rapid expansion",
     authors: "A. Sharma, H. Jain, J. O. Carnali, I. H. Jain",
     journal: "Applied Physics Letters",
-    details: "83, 2802–2804",
-    href: "",
+    details: "83 (14), 2802–2804",
+    href: "https://doi.org/10.1063/1.1614841",
     topics: [],
   },
 ];
