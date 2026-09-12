@@ -128,7 +128,7 @@ const TEAM = [
     creds: "PhD",
     pronouns: "she/her",
     role: "Postdoctoral Fellow",
-    tags: [],
+    tags: ["Damon Runyon Fellow"],
     photo: "https://static.wixstatic.com/media/8e7e6b_5a57acbe0176404f9eeb16de58b37043~mv2.jpg/v1/crop/x_0,y_0,w_1058,h_1209/fill/w_210,h_240,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Rachael%20McMinimy.jpg",
     bio: "Rachael grew up in Bar Harbor, Maine and attended Oberlin College, where she majored in biology and neuroscience. Following her graduation, she worked as a research technician in Dr. Samara Reck-Peterson's lab at UCSD studying regulation of the motor protein, dynein. For her PhD, she joined Dr. Michael Rapé's lab at UC Berkeley where she investigated how reactive oxygen species regulate mitochondrial metabolism. Outside of lab, Rachael enjoys spending time outside and teaching her cat new tricks.",
   },

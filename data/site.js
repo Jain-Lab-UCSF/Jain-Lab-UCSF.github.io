@@ -17,10 +17,10 @@ const SITE = {
 
   // One-line description used by Google and link previews
   metaDescription:
-    "The Isha Jain Lab at Arc Institute, Gladstone Institutes, and UCSF studies oxygen metabolism, hypoxia, vitamin metabolism, aging, and mitochondrial disease to uncover new therapies for human health.",
+    "The Isha Jain Lab at Gladstone Institutes, Arc Institute, and UCSF studies oxygen metabolism, hypoxia, vitamin metabolism, aging, and mitochondrial disease to uncover new therapies for human health.",
 
   // Institutions shown in the header strip on the home page
-  affiliations: ["Arc Institute", "Gladstone Institutes", "UCSF"],
+  affiliations: ["Gladstone Institutes", "Arc Institute", "UCSF"],
 
   // The navigation menu. To rename a tab, change the "label".
   // To remove a tab, delete its whole line. To reorder, move lines around.
@@ -37,7 +37,7 @@ const SITE = {
   hero: {
     headline: "We study oxygen and vitamin metabolism.",
     subhead:
-      "Our work covers mitochondrial disease, high-altitude physiology, cancer, and aging.",
+      "Hypoxia, mitochondrial disease, and aging — from mechanism to therapy.",
     // The mountain painting from the old home page. Shown beside the
     // headline. Swap the URL (or use "images/hero.png") to change it.
     image:
@@ -75,8 +75,8 @@ const SITE = {
   // Delete a line to hide it.
   links: [
     { label: "Google Scholar", href: "https://scholar.google.com/citations?user=Yy1cKfMAAAAJ" },
-    { label: "Arc Institute",  href: "https://arcinstitute.org" },
     { label: "Gladstone",      href: "https://gladstone.org" },
+    { label: "Arc Institute",  href: "https://arcinstitute.org" },
   ],
 
   footerNote: "© " + new Date().getFullYear() + " Jain Lab. All rights reserved.",
