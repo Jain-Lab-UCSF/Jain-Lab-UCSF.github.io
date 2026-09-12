@@ -73,6 +73,16 @@ const IGNORE = /fonts\.googleapis|stylesheet|Could not load|Not implemented/i;
       if (!el.getAttribute("class")) el.removeAttribute("class");
     });
 
+    // Drop stamps left by earlier runs, plus the blank lines they leave behind,
+    // so neither piles up one per run.
+    [...d.body.childNodes].forEach((n) => {
+      if (n.nodeType === 8 && /pre-rendered from data/.test(n.nodeValue)) n.remove();
+    });
+    while (d.body.firstChild && d.body.firstChild.nodeType === 3 &&
+           !d.body.firstChild.nodeValue.trim()) {
+      d.body.firstChild.remove();
+    }
+
     // Note in the source that this file is generated, so nobody hand-edits it.
     const stamp = d.createComment(
       ` Content below was pre-rendered from data/*.js on ${new Date().toISOString().slice(0, 10)}. ` +
